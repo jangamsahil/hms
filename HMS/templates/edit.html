@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card p-4 shadow-sm mt-4 mx-auto" style="max-width: 600px;">
+  <h3 class="text-primary mb-3 text-center">Edit Booking</h3>
+  <form method="POST">
+    <input type="text" name="email" value="{{ posts.email }}" class="form-control mb-3" required>
+    <input type="text" name="name" value="{{ posts.name }}" class="form-control mb-3" required>
+    <input type="text" name="gender" value="{{ posts.gender }}" class="form-control mb-3" required>
+    <input type="text" name="slot" value="{{ posts.slot }}" class="form-control mb-3" required>
+    <input type="text" name="disease" value="{{ posts.disease }}" class="form-control mb-3" required>
+    <input type="text" name="time" value="{{ posts.time }}" class="form-control mb-3" required>
+    <input type="text" name="date" value="{{ posts.date }}" class="form-control mb-3" required>
+    <input type="text" name="dept" value="{{ posts.dept }}" class="form-control mb-3" required>
+    <input type="text" name="number" value="{{ posts.number }}" class="form-control mb-3" required>
+    <button type="submit" class="btn btn-success w-100">Update</button>
+  </form>
+</div>
+{% endblock %}

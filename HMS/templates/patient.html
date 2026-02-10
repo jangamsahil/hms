@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card p-4 shadow-sm mt-4">
+  <h3 class="text-primary mb-3">Book Appointment</h3>
+  <form method="POST">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <input type="email" name="email" placeholder="Email" class="form-control" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <input type="text" name="name" placeholder="Full Name" class="form-control" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <select name="gender" class="form-control" required>
+          <option disabled selected>Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+      <div class="col-md-4 mb-3">
+        <input type="text" name="slot" placeholder="Slot (Morning/Evening)" class="form-control" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <input type="text" name="number" placeholder="Mobile Number" class="form-control" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <input type="text" name="disease" placeholder="Disease" class="form-control" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <input type="time" name="time" class="form-control" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <input type="date" name="date" class="form-control" required>
+      </div>
+    </div>
+    <select name="dept" class="form-control mb-3" required>
+      <option disabled selected>Select Department</option>
+      {% for d in doct %}
+        <option>{{ d.dept }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-primary w-100">Book Slot</button>
+  </form>
+</div>
+{% endblock %}

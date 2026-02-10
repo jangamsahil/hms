@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card p-4 shadow-sm mt-4 mx-auto" style="max-width: 500px;">
+  <h3 class="text-center text-primary mb-3">Add Doctor</h3>
+  <form method="POST">
+    <input type="email" name="email" placeholder="Doctor Email" class="form-control mb-3" required>
+    <input type="text" name="doctorname" placeholder="Doctor Name" class="form-control mb-3" required>
+    <input type="text" name="dept" placeholder="Department" class="form-control mb-3" required>
+    <button type="submit" class="btn btn-primary w-100">Save Doctor</button>
+  </form>
+</div>
+{% endblock %}

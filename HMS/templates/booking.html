@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="text-primary mb-4">My Bookings</h3>
+<table class="table table-bordered table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Dept</th>
+      <th>Disease</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Slot</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in query %}
+    <tr>
+      <td>{{ p.pid }}</td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.dept }}</td>
+      <td>{{ p.disease }}</td>
+      <td>{{ p.date }}</td>
+      <td>{{ p.time }}</td>
+      <td>{{ p.slot }}</td>
+      <td>
+        <a href="/edit/{{ p.pid }}" class="btn btn-warning btn-sm">Edit</a>
+        <a href="/delete/{{ p.pid }}" class="btn btn-danger btn-sm">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
