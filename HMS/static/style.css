@@ -1,0 +1,220 @@
+/* 🏥 BACKGROUND IMAGE */
+body {
+  background-image: url("/static/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(3px);
+}
+
+/* 🌐 GENERAL PAGE STYLE */
+body {
+  background-color: #f5f9ff;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧭 NAVBAR */
+.navbar {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar a.btn {
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.navbar a.btn:hover {
+  background-color: #00408b;
+  color: white;
+}
+
+/* 🏥 PAGE TITLES */
+h1, h3 {
+  font-weight: 700;
+  color: #004aad;
+}
+
+p.lead {
+  color: #000000;
+}
+
+/* 🧾 CARDS */
+.card {
+  border: none;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* 🔘 BUTTONS */
+.btn {
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #1e7e34;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #117a8b;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #ffc107;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #d39e00;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #b02a37;
+}
+
+/* 💬 ALERTS */
+.alert {
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* 📋 TABLES */
+table {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f6ff;
+  transition: 0.3s;
+}
+
+/* 🧍‍♂️ FORMS */
+input, select {
+  border-radius: 10px !important;
+  border: 1px solid #ccc !important;
+  padding: 10px !important;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: #007bff !important;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3) !important;
+}
+
+/* 🧾 HEADERS AND SECTIONS */
+.section-header {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-weight: 600;
+  color: #004aad;
+}
+/* 🏥 Hero Section */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 64, 128, 0.6), rgba(0, 64, 128, 0.6)), url("/static/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* 🩵 Features Section */
+.features .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+.features .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  letter-spacing: 1px;
+}
+
+
+/* 🦶 FOOTER */
+footer {
+  background: #004aad;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .card {
+    padding: 15px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+}

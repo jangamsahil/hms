@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="text-primary mb-3">Activity Logs</h3>
+<table class="table table-bordered table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>ID</th>
+      <th>Patient ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+      <th>Timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for t in posts %}
+    <tr>
+      <td>{{ t.tid }}</td>
+      <td>{{ t.pid }}</td>
+      <td>{{ t.name }}</td>
+      <td>{{ t.email }}</td>
+      <td>{{ t.action }}</td>
+      <td>{{ t.timestamp }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
