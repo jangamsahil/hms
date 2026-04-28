@@ -1,0 +1,729 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{background}
+\usepackage{fancybox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{float}
+\usetikzlibrary{calc}
+
+\renewcommand{\arraystretch}{1.5}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+%========================
+% Header/Footer Setup
+%========================
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[L]{\small DYPCOEI/COMP/Jangam Sahil Santosh}
+% \fancyhead[R]{\small Roll No. 13215, A.Y. 2024--25 Sem-I}
+% \fancyfoot[C]{\thepage}
+
+\backgroundsetup{
+  angle = 0, scale = 1, vshift = -2ex,
+  contents = {\tikz[overlay, remember picture]
+    \draw [line width=3pt, color=black, fill=white!10]
+    ($(current page.north west)+(1cm,-1cm)$)
+    rectangle ($(current page.south east)+(-1cm,1cm)$);}
+}
+
+\begin{document}
+
+%========================
+% TITLE PAGE
+%========================
+\thispagestyle{empty}
+\begin{center}
+    \vspace{0.5in}
+    \includegraphics[width=16cm, height=3cm]{img/title.jpeg}\\
+    \vspace{0.3in}
+
+    {\large\bf AN INTERNSHIP REPORT ON}\\
+    \vspace{0.3in}
+    {\Large\textbf{"Full-Stack Developer Intern"}}\\
+    \vspace{0.2in}
+    {\normalsize SUBMITTED TO SAVITRIBAI PHULE PUNE UNIVERSITY, PUNE\\
+    IN PARTIAL FULFILMENT OF THE REQUIREMENTS FOR THE AWARD OF THE DEGREE}\\
+    \vspace{0.2in}
+    {\bf OF}\\
+    \vspace{0.2in}
+    {\bf BACHELOR OF ENGINEERING (COMPUTER ENGINEERING)}\\
+    \vspace{0.4in}
+
+    {\bf SUBMITTED BY}\\
+    \vspace{0.3in}
+    {\large\bf STUDENT NAME:} JANGAM SAHIL SANTOSH\\
+    {\bf Roll No.: 13215}\\
+    \vspace{0.1in}
+    {\bf Year: 3rd Year}\\
+    \vspace{0.4in}
+
+    {\large\bf Under Guidance Of:} Mrs. Anita Shinkar\\
+    \vspace{0.4in}
+
+    {\large\bf DEPARTMENT OF COMPUTER ENGINEERING}\\
+    \vspace{0.2in}
+    {\large DR. D. Y. PATIL COLLEGE OF ENGINEERING AND INNOVATION}\\
+    {\large VARALE, TALEGAON, PUNE -- 410507}\\
+    \vspace{0.2in}
+    {\large\bf SAVITRIBAI PHULE PUNE UNIVERSITY}\\
+    {\large\bf ACADEMIC YEAR 2025--2026}
+\end{center}
+
+%========================
+% CERTIFICATE PAGE
+%========================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[width=16cm, height=3cm]{img/title.jpeg}\\
+    \vspace{0.4in}
+    {\Huge\textbf{CERTIFICATE}}\\
+    \vspace{0.4in}
+\end{center}
+
+\large
+This is to certify that \textbf{Mr. Jangam Sahil Santosh} (3rd Year, Roll No. 13215) is a bonafide student of the Department of Computer Engineering at Dr. D. Y. Patil College of Engineering and Innovation, Varale, Talegaon, Pune -- 410507.
+
+\vspace{0.3in}
+He has successfully completed his internship as a \textbf{Full Stack Developer Intern} at \textbf{Oppidan India Group} and submitted the necessary internship report titled:
+
+\vspace{0.3in}
+\begin{center}
+{\Large\textbf{"Development of MediX: A Full-Stack\\Hospital Management System"}}
+\end{center}
+\vspace{0.3in}
+
+The internship work has been carried out in a satisfactory manner under the supervision of the concerned faculty and is approved as a part of the partial fulfillment of the requirements of Savitribai Phule Pune University for the award of the degree of Bachelor of Engineering (Computer Engineering) for the Academic Year 2025--2026.
+
+\vspace{0.8in}
+\begin{table}[h]
+\centering
+\begin{tabular}{p{6cm} p{2cm} p{6cm}}
+\large\textbf{Mrs. Anita Shinkar} && \large\textbf{Mr. Jayesh Chaudhari}\\
+(Internal Supervisor) && (External Supervisor / Industry Mentor)\\
+\end{tabular}
+\end{table}
+\vspace{0.4in} % space before first table
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{6cm} p{2cm} p{6cm}}
+\large\textbf{Mrs. Anita Shinkar} && \large\textbf{Dr. Alpana Adsul}\\
+(Internship Coordinator) && (HOD, Computer Engineering)\\
+\end{tabular}
+\end{table}
+
+\vspace{0.4in} % space between table and principal
+
+\begin{center}
+\large\textbf{Dr. Suresh Mali}\\[0.1in]
+(Principal)
+\end{center}
+
+\vspace{0.3in} % space before place/date
+
+\noindent\textbf{Place:} Pune \hfill \textbf{Date:} \underline{\hspace{4cm}}
+
+%========================
+% OFFER LETTER IMAGE PAGE
+%========================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/_Offer Letter for Aniket Zimane-Oppidan.docx (1)_page-0001.jpg}
+\end{center}
+
+%========================
+% COMPLETION CERTIFICATE IMAGE PAGE
+%========================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/Internship_Certificate.jpeg}
+\end{center}
+
+%========================
+% LOR IMAGE PAGE
+%========================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/LOR.jpeg}
+\end{center}
+
+%========================
+% ORGANIZATION DETAILS (TITLE + LOGO BELOW)
+%========================
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+    {\Large\textbf{ORGANIZATION DETAILS}}\\
+    \vspace{0.15in}
+    \noindent\rule{\textwidth}{0.4pt}
+    
+    \vspace{0.3in}
+    
+    % Company Logo BELOW title
+    \includegraphics[width=4cm]{img/oppidan_logo.jpeg}
+\end{center}
+
+\vspace{0.4in}
+
+\setlength{\parindent}{1.5em}
+
+\textbf{Oppidan India Group} is an innovative organization focusing on software development, AI education, and related technological fields. Headquartered in Chinchwad, Maharashtra, the organization provides project-based learning and real-world project experiences for emerging engineers and developers.
+
+The company focuses on delivering robust full-stack solutions and training programs by leveraging modern web technologies, cloud infrastructure, and AI tools. Oppidan India Group equips its interns with industry-standard practices, empowering them to build scalable applications and contribute effectively to enterprise-level projects.
+
+The core focus of Oppidan India Group involves real-world product development where modern development methodologies are actively followed. The organization ensures that its technical solutions and project-based assignments are designed to handle high-scale requirements while maintaining performance, reliability, and scalability.
+
+During the internship, the organization provided a real-world product development environment where Agile methodologies such as Scrum were actively followed. Tools like GitHub were used for version control and code collaboration, while Linear was used for task management and sprint tracking. The company emphasizes code quality, modular architecture, and continuous performance optimization, making it an ideal platform for gaining hands-on experience in full-stack development.
+
+Overall, Oppidan India Group plays a significant role in enabling digital transformation by providing cutting-edge solutions for document lifecycle management and enterprise workflow automation.
+
+\vspace{0.4in}
+\begin{center}
+{\large\textbf{SUPERVISOR DETAILS}}\\
+\vspace{0.1in}
+\noindent\rule{\textwidth}{0.4pt}
+\end{center}
+
+\vspace{0.3in}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+\textbf{Name} & Mr. Jayesh Chaudhari \\
+\hline
+\textbf{Designation} & CTO{\hspace{6cm}} \\
+\hline
+\textbf{Organization} & Oppidan India Group \\
+\hline
+\textbf{Email} & oppidanindia@gmail.com{\hspace{6cm}} \\
+\hline
+\textbf{Contact Number} & -{\hspace{6cm}} \\
+\hline
+\textbf{Role in Internship} & External Supervisor / Industry Mentor; guided the intern in the development of the MediX platform, ensuring adherence to coding standards, optimized backend practices, and Agile workflow methodologies. \\
+\hline
+\end{tabular}
+\end{table}
+
+%========================
+% ACKNOWLEDGMENT
+%========================
+\newpage
+\begin{center}
+    {\Large\textbf{ACKNOWLEDGMENT}}
+\end{center}
+\vspace{0.5in}
+
+\setlength{\parindent}{1.5em}
+It is a matter of great privilege and honor for me to present this internship report on \textbf{"Development of MediX: A Full-Stack Hospital Management System"} undertaken at \textbf{Oppidan India Group}.
+
+I would like to express my sincere gratitude to \textbf{Mr. Jayesh Chaudhari} (External Supervisor, Oppidan India Group) for his continuous guidance, mentorship, and support throughout the internship. His insights into real-world product development practices and Agile workflows were invaluable in shaping my understanding of professional software engineering.
+
+I am deeply thankful to \textbf{Prof. Sachin Kadam} (Internal Supervisor) for his encouragement, timely feedback, and academic guidance that helped me relate my internship experiences to theoretical knowledge.
+
+I sincerely thank \textbf{Mrs. Anita Shinkar} (Internship Coordinator) for coordinating the internship process and facilitating smooth communication between the institution and the industry.
+
+My heartfelt gratitude goes to \textbf{Dr. Alpana Adsul} (Head of Department, Computer Engineering) and \textbf{Dr. Suresh Mali} (Principal, DYPCOEI) for their visionary leadership and for creating an environment that encourages students to gain practical industry exposure.
+
+I am also grateful to the entire development team at Oppidan India Group for welcoming me as a team member, sharing their expertise, and providing a collaborative environment that made this learning experience truly enriching.
+
+Finally, I express my deepest appreciation to my family and friends for their unwavering moral support throughout this journey.
+
+\vspace{2cm}
+\noindent\textbf{Jangam Sahil Santosh}\\
+Roll No.: 13215\\
+Department of Computer Engineering\\
+Dr. D. Y. Patil College of Engineering and Innovation
+
+%========================
+% ABSTRACT
+%========================
+\newpage
+\begin{center}
+    {\Large\textbf{ABSTRACT}}
+\end{center}
+\vspace{0.5in}
+
+This internship report documents the work undertaken by Jangam Sahil Santosh as a \textbf{Full Stack Developer Intern} at \textbf{Oppidan India Group}, Pune, during the academic year 2025--2026. The primary objective of the internship was to \textbf{develop MediX}, a comprehensive Hospital Management System (HMS), serving as an advanced platform to streamline healthcare operations.
+
+The internship was conducted in a real-world, product-based company environment. The intern worked as an integral member of the development team, following \textbf{Agile (Scrum) methodology} with daily stand-ups, sprint planning, code reviews, and retrospective sessions. \textbf{Linear} was used for task assignment and sprint tracking, while \textbf{GitHub} served as the version control system -- with Pull Requests (PRs), peer code reviews, and feedback loops as standard practice.
+
+The scope of the project encompassed the design and implementation of a robust God-View administrative dashboard with full CRUD capabilities, integration of analytics via Recharts, and a highly responsive React-based UI supporting dark mode. On the backend, advanced logic was implemented using Node.js and MySQL (with Sequelize ORM) to manage real-time data synchronization across active and archived databases, alongside a stringent appointment scheduling algorithm designed to enforce strict chronological integrity and prevent overlapping bookings.
+
+This report presents a comprehensive account of the methodology, system architecture, technologies used, challenges encountered, and results achieved during the internship. It demonstrates how academic knowledge in web development, database management, and software engineering can be applied effectively in a professional product-development environment.
+
+\vspace{0.3in}
+\noindent\textbf{Keywords:} Full Stack Development, React, Node.js, Sequelize, MySQL, Hospital Management System, UI Enhancement, Agile Methodology, GitHub, Linear, Data Archival, Analytics.
+
+%========================
+% TABLE OF CONTENTS
+%========================
+\newpage
+\tableofcontents
+
+%========================
+% LIST OF FIGURES
+%========================
+\newpage
+\listoffigures
+
+%========================
+% LIST OF TABLES
+%========================
+\listoftables
+
+%========================
+% CHAPTER 1: INTRODUCTION
+%========================
+\newpage
+\section{Introduction}
+\label{chap:intro}
+
+\subsection{Overview}
+
+The modern software industry demands not only theoretical knowledge but also hands-on experience with real-world development environments, workflows, and tools. This internship at \textbf{Oppidan India Group}, a product-based SaaS company based in Pune, provided an invaluable opportunity to bridge the gap between academic learning and industry practice.
+
+Oppidan India Group is a technology company that offers digital management platforms. During this internship, the focus was placed on building a full-fledged enterprise application to manage healthcare administration, applying modern engineering standards for scalability, performance, and usability.
+
+\subsection{Primary Objective of the Internship Project}
+
+The primary objective of this internship was focused around the development of the \textbf{MediX Hospital Management System}:
+
+\begin{enumerate}
+    \item \textbf{System Architecture \& Backend:} To build secure, fast RESTful APIs using Node.js and Express, connected to dual MySQL databases (main and archive) using Sequelize ORM for efficient data management and fallback synchronization.
+    \item \textbf{Advanced Frontend Features:} To implement a responsive React-based user interface equipped with a robust 'God-View' Admin panel, advanced data visualization using Recharts, and seamless dark mode integration.
+\end{enumerate}
+
+\subsection{Motivation}
+
+The motivation for undertaking this project arose from the practical necessity to streamline hospital operations through digital transformation. Traditional healthcare management systems often suffer from:
+
+\begin{itemize}
+    \item Inefficient scheduling leading to overlapping appointments and poor time management.
+    \item Cluttered and unresponsive user interfaces that hinder administrative productivity.
+    \item Lack of data archival capabilities, resulting in bloated primary databases.
+    \item Missing real-time analytical insights required for high-level administrative decision-making.
+\end{itemize}
+
+Developing MediX directly addressed these challenges, improving both the end-user experience for medical staff and the administrative control for hospital management.
+
+\subsection{Scope of the Internship Project}
+
+The scope of this internship project encompasses the following areas:
+
+\begin{enumerate}
+    \item \textbf{Full-Stack Implementation:} Building out the frontend (React.js) and backend (Node.js) to facilitate seamless data communication.
+    \item \textbf{Admin User Management:} Enabling administrators to view, modify, and permanently delete registered patients and doctors, ensuring clean cascading deletions across associated records.
+    \item \textbf{Appointment Scheduling Optimization:} Refining backend logic to enforce a strict 15-minute slot safety constraint, effectively preventing overlapping bookings.
+    \item \textbf{Dual Database Strategy:} Managing real-time data persistence across an active main database and a separate archival database to maintain performance and data integrity over time.
+    \item \textbf{Data Visualization:} Integrating Recharts to provide dynamic analytics and graphical representation of hospital metrics.
+    \item \textbf{Agile Collaboration:} Participating in all Agile ceremonies, raising PRs on GitHub, and working within the Linear task management system.
+\end{enumerate}
+
+\subsection{The Scope of Internship Project Encompasses}
+
+\begin{table}[h!]
+\centering
+\caption{Scope Areas of the Internship Project}
+\label{tab:scope}
+\begin{tabular}{|p{1cm}|p{4cm}|p{8cm}|}
+\hline
+\textbf{Sr.} & \textbf{Area} & \textbf{Description} \\
+\hline
+1 & Full-Stack Development & Developing MediX using React.js, Node.js, and Express \\
+\hline
+2 & Admin Dashboard & Creating a 'God-View' panel for complete CRUD administrative control \\
+\hline
+3 & Scheduling Algorithm & Implementing backend logic to prevent appointment overlaps \\
+\hline
+4 & Database Architecture & Dual MySQL databases via Sequelize ORM for active and archived data \\
+\hline
+5 & UI/UX Enhancement & Integrating Dark Mode, responsive design, and Recharts analytics \\
+\hline
+6 & Agile Process & Scrum framework, Linear tracking, and GitHub PR reviews \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Organization of the Report}
+
+The remainder of this report is organized as follows:
+\begin{itemize}
+    \item \textbf{Chapter 2} presents the methodology, system architecture, and development workflow followed during the internship.
+    \item \textbf{Chapter 3} showcases the results through screenshots and functional observations.
+    \item \textbf{Chapter 4} provides the conclusion and learnings from the internship.
+    \item \textbf{Chapter 5} lists all references and abbreviations used.
+\end{itemize}
+
+%========================
+% CHAPTER 2: METHODOLOGY
+%========================
+\newpage
+\section{Methodology}
+\label{chap:methodology}
+
+\subsection{Proposed Solution}
+
+The proposed solution to build a highly scalable hospital management system involved designing a modular architecture. The application was constructed utilizing a decoupled frontend and backend approach, allowing parallel development and independent scalability.
+
+The core strategy was:
+\begin{itemize}
+    \item Construct REST API endpoints to process administrative commands, user registration, and appointment handling.
+    \item Employ a dual-database design where historical data is shifted to an archival MySQL database, keeping the primary database performant.
+    \item Implement advanced time-handling algorithms on the backend to guarantee scheduling integrity.
+    \item Develop an interactive frontend using React, providing immediate visual feedback for data mutations (CRUD) and administrative analytics.
+\end{itemize}
+
+\subsection{The Methodology Encompasses the Following Steps}
+
+\begin{enumerate}
+    \item \textbf{Requirement Gathering:} Discussions with the team lead to understand the core functionalities needed for a modern healthcare SaaS.
+    \item \textbf{Database Schema Design:} Defining associations, foreign keys, and cascading delete rules within the Sequelize ORM across both Main and Archive databases.
+    \item \textbf{Backend Implementation:} Constructing secure routes, middleware, and logic to handle appointments, user management, and dual-database writes.
+    \item \textbf{Frontend Development:} Writing React components, setting up Context/Hooks for state management, and applying Vanilla CSS with Dark Mode support.
+    \item \textbf{Code Review:} Raising Pull Requests on GitHub for peer review; incorporating feedback and making necessary changes before merging.
+    \item \textbf{Testing:} Validating the appointment anti-overlap logic, testing cascading deletions in the database, and cross-browser testing for the UI.
+    \item \textbf{Agile Integration:} Managing tasks iteratively over weekly sprints using Linear.
+\end{enumerate}
+
+\subsection{System Architecture}
+
+The system architecture of the MediX platform follows a modern \textbf{client-server model}:
+
+\begin{itemize}
+    \item \textbf{Frontend (Client Layer):} React-based Single Page Application (SPA). Utilizes components, Context API, Vanilla CSS, and Recharts for a seamless UI.
+    \item \textbf{API Layer:} Node.js and Express RESTful endpoints facilitating data exchange via JSON.
+    \item \textbf{Backend/Database Layer:} Two distinct MySQL instances (Main and Archive) connected via Sequelize. This dual setup ensures longevity and fast query times on active records.
+    \item \textbf{Version Control:} GitHub repository with structured branching strategies (feature branches, PRs).
+    \item \textbf{Task Management:} Linear utilized for ticket tracking and sprint cycles.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\large [System Architecture Diagram -- Placeholder]\vspace{3cm}}}
+    \caption{System Architecture of MediX}
+    \label{fig:system_architecture}
+\end{figure}
+
+\subsection{Project Specification}
+
+\begin{table}[H]
+\centering
+\caption{Project Specification Details}
+\label{tab:project_spec}
+\begin{tabular}{|p{4.5cm}|p{8cm}|}
+\hline
+\textbf{Parameter} & \textbf{Details} \\
+\hline
+Project Name & MediX Hospital Management System \\
+\hline
+Organization & Oppidan India Group \\
+\hline
+Frontend Technology & React.js (with Hooks and Context API) \\
+\hline
+Styling & Vanilla CSS (with Dark Mode integration) \\
+\hline
+Backend Engine & Node.js with Express.js \\
+\hline
+Database & MySQL (Dual Databases: Main \& Archive) \\
+\hline
+ORM & Sequelize \\
+\hline
+Version Control & Git \& GitHub \\
+\hline
+Task Management & Linear \\
+\hline
+Development Methodology & Agile (Scrum) \\
+\hline
+Code Review Tool & GitHub Pull Requests \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Data Flow Architecture / Project Flow}
+
+The data flow within MediX emphasizes synchronization and immediate feedback:
+
+\begin{enumerate}
+    \item \textbf{Admin Interaction:} An admin initiates an action (e.g., deleting a patient record).
+    \item \textbf{API Request:} A secure DELETE request is dispatched to the Express server.
+    \item \textbf{Dual Database Transaction:} The backend logic removes the user from the Main MySQL DB and triggers a cascading delete of associated appointments. Simultaneously, it syncs this state to the Archive DB to maintain historical accuracy.
+    \item \textbf{Response:} The API returns a success payload confirming the cascading actions.
+    \item \textbf{UI Refresh:} The React frontend instantly updates the God-View dashboard and analytical charts without requiring a hard refresh.
+\end{enumerate}
+
+\subsection{Agile Methodology -- Participate in Daily Stand-Up}
+
+The internship was carried out within the company's existing Agile (Scrum) framework. As an intern, active participation in all Agile ceremonies was mandatory and contributed significantly to understanding real-world software project management.
+
+\subsubsection{Daily Stand-Up}
+Every working day began with a \textbf{Daily Stand-Up Meeting} (typically 15 minutes), where each team member answered three key questions:
+\begin{enumerate}
+    \item \textbf{What did I work on yesterday?}
+    \item \textbf{What will I work on today?}
+    \item \textbf{Are there any blockers or impediments?}
+\end{enumerate}
+
+This practice ensured transparency, quick identification of blockers, and daily alignment with the team's sprint goals.
+
+\subsubsection{Sprint Planning}
+At the start of each sprint, the team conducted sprint planning where tasks were broken down and assigned from the Linear backlog.
+
+\subsubsection{Code Review and Pull Requests on GitHub}
+A critical aspect of the Agile workflow was the \textbf{GitHub Pull Request (PR)} process:
+\begin{itemize}
+    \item The intern created a feature branch for each task assigned via Linear.
+    \item Upon completion, a PR was raised.
+    \item Senior developers performed \textbf{pre-review checks} to ensure code quality and logic integrity (especially concerning the complex appointment scheduling algorithms).
+    \item \textbf{Feedback} was addressed, and upon approval, the PR was merged.
+\end{itemize}
+
+\subsubsection{Linear for Task Management}
+\textbf{Linear} was used as the primary project management tool:
+\begin{itemize}
+    \item Tasks were organized in Kanban-style boards: \textit{Backlog} → \textit{In Progress} → \textit{In Review} → \textit{Done}.
+    \item Each task was linked to a GitHub branch, providing full traceability.
+\end{itemize}
+
+\subsection{Software Requirement Specification}
+
+\begin{table}[H]
+\centering
+\caption{Software Requirements Specification}
+\label{tab:srs}
+\begin{tabular}{|p{4cm}|p{8cm}|}
+\hline
+\textbf{Requirement} & \textbf{Details} \\
+\hline
+Operating System & Windows 10/11 / macOS / Ubuntu Linux \\
+\hline
+Browser & Google Chrome (Latest), Mozilla Firefox (Latest) \\
+\hline
+Frontend Framework & React.js \\
+\hline
+Backend Environment & Node.js (v18+) \\
+\hline
+Package Manager & npm \\
+\hline
+Code Editor & Visual Studio Code \\
+\hline
+Version Control & Git (v2.x) \& GitHub \\
+\hline
+Database Interface & Sequelize CLI / MySQL Workbench \\
+\hline
+Task Management & Linear \\
+\hline
+Communication & Slack / Microsoft Teams \\
+\hline
+\end{tabular}
+\end{table}
+
+%========================
+% CHAPTER 3: RESULTS
+%========================
+\newpage
+\section{Results and Screenshots}
+\label{chap:results}
+
+This chapter presents the outcomes of the internship project through descriptive summaries and screenshots demonstrating the core functionalities of the MediX Hospital Management System.
+
+\subsection{MediX Admin Dashboard (God-View)}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\large [Insert God-View Dashboard Screenshot]\vspace{3cm}}}
+    \caption{MediX Admin Dashboard -- Comprehensive User Management}
+    \label{fig:admin_dashboard}
+\end{figure}
+
+\noindent\textbf{Description:} Figure \ref{fig:admin_dashboard} depicts the 'God-View' administrative panel. This interface provides administrators with a centralized location to monitor all registered doctors and patients, review system logs, and execute cascading deletions that synchronize across both the Main and Archive databases seamlessly.
+
+\subsection{Appointment Scheduling System}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\large [Insert Appointment Interface Screenshot]\vspace{3cm}}}
+    \caption{MediX Appointment Scheduling -- Overlap Prevention}
+    \label{fig:appointment_scheduling}
+\end{figure}
+
+\noindent\textbf{Description:} Figure \ref{fig:appointment_scheduling} highlights the robust appointment booking interface. Powered by an advanced backend algorithm, the system enforces a strict 15-minute gap between appointments. The UI provides real-time validation, preventing users from creating conflicting bookings and effectively addressing critical timezone inconsistencies.
+
+\subsection{Analytics and Data Visualization}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\large [Insert Recharts Analytics Screenshot]\vspace{3cm}}}
+    \caption{Hospital Metrics Visualization via Recharts}
+    \label{fig:analytics}
+\end{figure}
+
+\noindent\textbf{Description:} Figure \ref{fig:analytics} showcases the integration of Recharts into the dashboard. It visualizes key hospital metrics, appointment trends, and user statistics, transforming raw database queries into actionable administrative insights.
+
+\subsection{Dark Mode \& Responsive UI}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\large [Insert Dark Mode Screenshot]\vspace{3cm}}}
+    \caption{MediX Interface -- Dark Mode Implementation}
+    \label{fig:dark_mode}
+\end{figure}
+
+\noindent\textbf{Description:} Figure \ref{fig:dark_mode} illustrates the responsive nature of the MediX application along with its native Dark Mode feature, developed entirely utilizing Vanilla CSS. This ensures visual accessibility and a premium user experience across all devices.
+
+\subsection{Agile Workflows: GitHub \& Linear}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\large [Insert GitHub/Linear Screenshot]\vspace{3cm}}}
+    \caption{Agile Collaboration Tools}
+    \label{fig:agile_tools}
+\end{figure}
+
+\noindent\textbf{Description:} Figure \ref{fig:agile_tools} represents the professional environment tools utilized during development. Tracking tasks via Linear and executing structured Pull Request reviews on GitHub facilitated an organized, industry-standard development cycle.
+
+%========================
+% CHAPTER 4: CONCLUSION
+%========================
+\newpage
+\section{Conclusion}
+\label{chap:conclusion}
+
+This internship at \textbf{Oppidan India Group} as a \textbf{Full Stack Developer Intern} proved to be a highly enriching and rewarding professional experience. The hands-on exposure to a real-world product development environment significantly bridged the gap between academic learning and industry practice.
+
+The primary objective of developing \textbf{MediX}, a robust Hospital Management System, was successfully accomplished. The key outcomes include:
+
+\begin{itemize}
+    \item The successful implementation of a full-stack architecture utilizing React, Node.js, and MySQL.
+    \item Development of a powerful 'God-View' administrative dashboard facilitating deep CRUD operations and automated data synchronization between active and archival databases.
+    \item Creation of a fault-tolerant appointment scheduling algorithm that effectively resolved timezone overlap issues and enforced strict booking intervals.
+    \item Enhancing user experience through responsive design, native Dark Mode, and interactive data visualization using Recharts.
+    \item Practical proficiency in \textbf{Agile/Scrum methodology}, including active participation in daily stand-ups, sprint planning, reviews, and retrospectives.
+    \item Hands-on experience with the complete \textbf{GitHub PR workflow} and \textbf{Linear} for meticulous task management.
+\end{itemize}
+
+Beyond the technical achievements, this internship provided invaluable exposure to professional work ethics, team collaboration, and the responsibilities inherent in managing complex backend logic and database structures. The experience of receiving and implementing code review feedback from senior developers was particularly valuable, instilling best practices that go beyond textbook knowledge.
+
+The internship affirmed that software development is a collaborative, iterative, and user-centric endeavor. The lessons learned -- both technical and interpersonal -- will serve as a strong foundation for future professional roles.
+
+\vspace{0.3in}
+\noindent In conclusion, this internship successfully fulfilled its academic objectives, contributed meaningfully to the development of a sophisticated SaaS platform, and provided a transformative learning experience that will significantly influence the intern's approach to software engineering in his career ahead.
+
+%========================
+% CHAPTER 5: REFERENCES & ABBREVIATIONS
+%========================
+\newpage
+\section{List of References}
+\label{chap:references}
+
+\begin{thebibliography}{99}
+
+\bibitem{react}
+Meta Platforms, Inc. \textit{React -- A JavaScript library for building user interfaces.} Available at: \url{https://reactjs.org/}
+
+\bibitem{nodejs}
+OpenJS Foundation. \textit{Node.js -- JavaScript runtime built on Chrome's V8 JavaScript engine.} Available at: \url{https://nodejs.org/}
+
+\bibitem{express}
+OpenJS Foundation. \textit{Express -- Fast, unopinionated, minimalist web framework for Node.js.} Available at: \url{https://expressjs.com/}
+
+\bibitem{sequelize}
+Sequelize Contributors. \textit{Sequelize -- Feature-rich ORM for modern Node.js and TypeScript.} Available at: \url{https://sequelize.org/}
+
+\bibitem{mysql}
+Oracle Corporation. \textit{MySQL -- The world's most popular open source database.} Available at: \url{https://www.mysql.com/}
+
+\bibitem{recharts}
+Recharts Contributors. \textit{Recharts -- A composable charting library built on React components.} Available at: \url{https://recharts.org/}
+
+\bibitem{github}
+GitHub Inc. \textit{GitHub -- Where the world builds software.} Available at: \url{https://github.com}
+
+\bibitem{linear}
+Linear B.V. \textit{Linear -- The issue tracking tool you'll enjoy using.} Available at: \url{https://linear.app}
+
+\bibitem{restapi}
+Fielding, R. T. (2000). \textit{Architectural Styles and the Design of Network-based Software Architectures.} Doctoral Dissertation, University of California, Irvine.
+
+\bibitem{agile}
+Beck, K. et al. (2001). \textit{Manifesto for Agile Software Development.} Available at: \url{https://agilemanifesto.org/}
+
+\end{thebibliography}
+
+%========================
+% LIST OF ABBREVIATIONS
+%========================
+\newpage
+\section*{List of Abbreviations}
+\addcontentsline{toc}{section}{List of Abbreviations}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{3cm}|p{10cm}|}
+\hline
+\textbf{Abbreviation} & \textbf{Full Form} \\
+\hline
+API & Application Programming Interface \\
+\hline
+CRUD & Create, Read, Update, Delete \\
+\hline
+CSS & Cascading Style Sheets \\
+\hline
+DB & Database \\
+\hline
+DOM & Document Object Model \\
+\hline
+Git & Global Information Tracker \\
+\hline
+HMS & Hospital Management System \\
+\hline
+HOD & Head of Department \\
+\hline
+HTML & HyperText Markup Language \\
+\hline
+HTTP & HyperText Transfer Protocol \\
+\hline
+JSON & JavaScript Object Notation \\
+\hline
+ORM & Object-Relational Mapping \\
+\hline
+PR & Pull Request \\
+\hline
+REST & Representational State Transfer \\
+\hline
+SaaS & Software as a Service \\
+\hline
+SPA & Single Page Application \\
+\hline
+UI & User Interface \\
+\hline
+URL & Uniform Resource Locator \\
+\hline
+UX & User Experience \\
+\hline
+\end{tabular}
+\caption{List of Abbreviations Used in the Report}
+\label{tab:abbreviations}
+\end{table}
+\end{document}
